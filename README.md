@@ -123,13 +123,16 @@ file_path = 'data/safelySanitization.csv'
 visualizer = DataVisualizer(file_path)
 
 # Plot the value of "First Tooltip" for Dim1 in the year 2017 for China, Austria, and Djibouti.
-visualizer.plot_first_tooltip_by_location(visualizer,2017, None, ["China","Austria","Djibouti"])
+visualizer.plot_by_location(visualizer,2017, None, ["China","Austria","Djibouti"])
 
 # Prepares data for plotting based on China.
 visualizer.prepare_data_for_plotting(self=visualizer,location="China")
 
 # Generate a lineplot for China.
 visualizer.lineplot(visualizer,"China")
+
+# Generate a lineplot for African region.
+visualizer.lineplot(visualizer,location="AFR")
 
 # Generate a scatterplot for China.
 visualizer.scatterplot(visualizer, "China")
@@ -139,9 +142,12 @@ visualizer.barplot(visualizer, "China")
 
 # Create a heat geomap with a slider and dropdown to switch between years and 'Dim1' values. The default displayed year is 2013.
 visualizer.create_health_map_1(visualizer, initial_year=2013)
-
-# Generate a lineplot for African region.
-visualizer.lineplot(visualizer,location="AFR")
 ```
 Example Visualization:
-
+<img src="pic/plot_by_location.png" width="300" height = "200">
+<img src="pic/lineplot.png" width="300" height = "200">
+<img src="pic/lineplot_region.png" width="300" height = "200">
+<img src="pic/scatterplot.png" width="300" height = "200">
+<img src="pic/barplot.png" width="300" height = "200">
+<img src="pic/create_health_map_1.png" width="300" height = "200">
+<img src="pic/create_health_map_1.png" width="300" height = "200">
