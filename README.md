@@ -145,9 +145,9 @@ visualizer.create_health_map_1(visualizer, initial_year=2013)
 ```
 Example Visualization:
 
-<img src="pic/plot_by_location.png" width="300" height = "200">
-<img src="pic/lineplot.png" width="300" height = "200">
-<img src="pic/lineplot_region.png" width="300" height = "200">
-<img src="pic/scatterplot.png" width="300" height = "200">
-<img src="pic/barplot.png" width="300" height = "200">
-<img src="pic/create_health_map_1.png" width="300" height = "200">
+<img src="pic/plot_by_location.png" width="400" height = "300">
+<img src="pic/lineplot.png" width="400" height = "300">
+<img src="pic/lineplot_region.png" width="400" height = "300">
+<img src="pic/scatterplot.png" width="400" height = "300">
+<img src="pic/barplot.png" width="400" height = "300">
+<img src="pic/create_health_map_1.png" width="400" height = "300">
