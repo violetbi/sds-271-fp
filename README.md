@@ -1,11 +1,23 @@
 # SDS 271 Final Project Group 1
 
+Author: Christy Yang, Vicky Xu, Xinran Bi, Yuzhang Fu
+
 ## Package: Global Health Data Visualizer
 
-The purpose of the package: what does it do and why did you make it? What need does it fill?
 
-This is a pacakge that takes in all sorts of health related data, offering users handy visualization tools to enhance their understanding of health patterns across countries and regions. The user can examine health data either on a global scale or exploring specific regions to extract valuable insights for public health. 
+## Description 
 
+This is a python pacakge that takes in all sorts of health related data, offering users handy visualization tools to enhance their understanding of health patterns across countries and regions. The user can examine health data either on a global scale or exploring specific regions to extract valuable insights for public health. 
+
+The desired dataset should include the following columns: Location, Period (year), Indicator, Dim1, and First Tooltip.
+The "First Tooltip" column refers to the value for the indicator. 
+Otherwise, your dataset might not align with certain function's default settings.
+
+Examples of datasets used in later tests are sourced from the WHO, providing the latest and most updated global health statistics. Specifically:
+
+1. The 'safelySanitization.csv' file contains data on the percentage of the population using safe sanitation services for each country during a specific year, classified as urban, rural, or total.
+
+2. The 'HALElifeExpectancyAtBirth.csv' file contains data on Healthy Life Expectancy (HALE) at birth (in years) for each country during a specific year, categorized as female, male, or both sexes.
 
 What is in the package: a brief description of all attributes and methods, including what arguments are needed for each function and what the output is.
 
@@ -55,8 +67,10 @@ Generate a lineplot for the specified country or region.
 Parameters:
 - location (str): The country or region for the lineplot.
 
-### `plot_first_tooltip_by_location(self, period: int, column_name=None, location=None)`
+### `plot_by_location(self, period: int, column_name=None, location=None)`
 Plot the value of "First Tooltip" for Dim1 = 'Total' at a designated period for different locations.
+
+The first tooltip refers to the value for the indicator.
 
 Parameters:
 - period (int): The specified year.
@@ -67,6 +81,20 @@ Notes:
 If column_name is not provided and all entries in the 'Indicator' column are identical,
 it uses the first entry in the 'Indicator' column as the column name.
 If the 'Dim1' column includes categories 'Urban', 'Total', and 'Rural', the function proceeds with plotting;
+otherwise, it notifies that the 'Dim1' column does not meet the specified criteria.
+
+### `plot_by_location_male_female(self, period, column_name=None, location=None)`
+Plot the value of "First Tooltip" for Dim1 = 'Total' at a designated period for different sexes.
+
+Parameters:
+- period (int): The specified year.
+- column_name (str, optional): Indicator for plotting.
+- location (str, optional): Location to filter the data.
+    
+Notes:
+If column_name is not provided and all entries in the 'Indicator' column are identical,
+it uses the first entry in the 'Indicator' column as the column name.
+If the 'Dim1' column includes categories 'Both sexes', 'Male', and 'Female', the function proceeds with plotting;
 otherwise, it notifies that the 'Dim1' column does not meet the specified criteria.
 
 ### `prepare_data_for_plotting(self, location: str) -> Tuple[pd.DataFrame, str]`
@@ -84,8 +112,7 @@ Generate a scatterplot for the specified country or region.
 Parameters:
 - location (str): The country or region for the scatterplot.
 
-## Examples
-A few (at least two) examples of how this package could be used.
+## Usages
 
 ```python
 # import package
@@ -116,3 +143,5 @@ visualizer.create_health_map_1(visualizer, initial_year=2013)
 # Generate a lineplot for African region.
 visualizer.lineplot(visualizer,location="AFR")
 ```
+Example Visualization:
+
