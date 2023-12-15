@@ -5,8 +5,6 @@
 # Group 1 Christy Yang, Vicky Xu, Xinran Bi, Yuzhang Fu
 # ### Intro
 
-# In[1]:
-
 
 #import libraries needed
 import pandas as pd
@@ -25,9 +23,6 @@ from mpl_toolkits.mplot3d import Axes3D
 from ipywidgets import Dropdown
 from ipywidgets import HTML
 import matplotlib.ticker as ticker
-
-
-# In[2]:
 
 
 class DataVisualizer:    
@@ -417,88 +412,6 @@ class DataVisualizer:
 
         # Display the slider and dropdown
         display(widgets.VBox([year_slider, dim1_dropdown, output]))
-
-
-# In[3]:
-
-
-file_path = 'data/safelySanitization.csv'
-file_path_2 = 'data/HALElifeExpectancyAtBirth.csv'
-file_path_3 = 'data/airPollutionDeathRate.csv'
-
-
-# Instantiate the DataAnalyzer class
-visualizer = DataVisualizer(file_path)
-visualizer_2 = DataVisualizer(file_path_2)
-visualizer_3 = DataVisualizer(file_path_3)
-
-visualizer.data.head()
-visualizer_2.data.head()
-visualizer_3.data.head()
-
-
-# In[4]:
-
-
-visualizer.plot_by_location(visualizer,2017, None, ["China","Austria","Djibouti"])
-
-
-# In[5]:
-
-
-visualizer_2.plot_by_location_male_female(visualizer_2, 2019, None, ["China", "Austria", "Djibouti"])
-
-
-# In[6]:
-
-
-visualizer_3.split_by_indicator(visualizer_3)
-
-
-# In[7]:
-
-
-visualizer.lineplot(visualizer,"China")
-
-
-# In[8]:
-
-
-visualizer.scatterplot(visualizer, "China")
-
-
-# In[9]:
-
-
-visualizer.barplot(visualizer, "China")
-
-
-# In[10]:
-
-
-visualizer.create_health_map_1(visualizer, initial_year=2013)
-
-
-# In[11]:
-
-
-visualizer.lineplot(visualizer,location="AFR")
-
-
-# In[12]:
-
-
-help(visualizer)
-
-
-# In[13]:
-
-
-visualizer_3.df_split
-
-
-# In[ ]:
-
 
 
 
