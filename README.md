@@ -4,8 +4,6 @@ Author: Christy Yang, Vicky Xu, Xinran Bi, Yuzhang Fu
 
 ## Package: Global Health Data Visualizer
 
-## Description 
-
 This is a python pacakge that takes in all sorts of health related data, offering users handy visualization tools to enhance their understanding of health patterns across countries and regions. The user can examine health data either on a global scale or exploring specific regions to extract valuable insights for public health. 
 
 The desired dataset should include the following columns: Location, Period (year), Indicator, Dim1, and First Tooltip.
