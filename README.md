@@ -25,6 +25,7 @@ What is in the package: a brief description of all attributes and methods, inclu
 1. `data`: Data loaded from a CSV.
 2. `regions`: Dict containing region codes as keys and countries as values.
 3. `df_region`: Initialize as `None` to store the result of data aggregation by region and year.
+4. `df_split`: Initialize as `None` to store the result of splitted dataframes due to multiple indicators.
 
 ## Methods
 
@@ -152,9 +153,8 @@ visualizer.create_health_map_1(visualizer, initial_year=2013)
 ```
 Example Visualization:
 
-<img src="pic/plot_by_location.png" width="400" height = "300">
-<img src="pic/lineplot.png" width="400" height = "300">
-<img src="pic/lineplot_region.png" width="400" height = "300">
-<img src="pic/scatterplot.png" width="400" height = "300">
-<img src="pic/barplot.png" width="400" height = "300">
-<img src="pic/create_health_map_1.png" width="400" height = "300">
+<img src="pic/plot_by_location.png" width="50%">
+<img src="pic/lineplot_region.png" width="50%">
+<img src="pic/scatterplot.png" width="50%">
+<img src="pic/barplot.png" width="50%">
+<img src="pic/create_health_map_1.png" width="50%">
