@@ -113,6 +113,12 @@ Generate a scatterplot for the specified country or region.
 Parameters:
 - location (str): The country or region for the scatterplot.
 
+### `split_by_indicator(self)`
+Split dataframes that contains more than one unique value in `Indicator` column
+
+Returns:
+- The subdatasets that generated based on value in `Indicator`
+
 ## Usages
 
 ```python
