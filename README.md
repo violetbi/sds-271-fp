@@ -19,6 +19,8 @@ Examples of datasets used in later tests are sourced from the WHO, providing the
 
 2. The 'HALElifeExpectancyAtBirth.csv' file contains data on Healthy Life Expectancy (HALE) at birth (in years) for each country during a specific year, categorized as female, male, or both sexes.
 
+3. The 'airPollutionDeathRate.csv' file contains data on Ambient and household air pollution attributable death rate (per 100 000 population), and deatch rate (per 100 000 population, **age-standardized**). 
+
 What is in the package: a brief description of all attributes and methods, including what arguments are needed for each function and what the output is.
 
 ## Attributes
