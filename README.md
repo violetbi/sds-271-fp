@@ -56,7 +56,7 @@ Returns:
 - bool: True if all entries are identical, False otherwise.
 
 ### `create_health_map_1(self, initial_year: int)`
-Create a heat geomap with a slider and dropdown to switch between years and 'Dim1' values.
+Create a geomap with a slider and dropdown to switch between years and 'Dim1' values.
 Update the map with a single layer based on user selection.
 
 Parameters:
