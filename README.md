@@ -4,12 +4,12 @@ Author: Christy Yang, Vicky Xu, Xinran Bi, Yuzhang Fu
 
 ## Package: Global Health Data Visualizer
 
-
 ## Description 
 
 This is a python pacakge that takes in all sorts of health related data, offering users handy visualization tools to enhance their understanding of health patterns across countries and regions. The user can examine health data either on a global scale or exploring specific regions to extract valuable insights for public health. 
 
 The desired dataset should include the following columns: Location, Period (year), Indicator, Dim1, and First Tooltip.
+
 The "First Tooltip" column refers to the value for the indicator. 
 Otherwise, your dataset might not align with certain function's default settings.
 
@@ -24,13 +24,14 @@ What is in the package: a brief description of all attributes and methods, inclu
 ## Attributes
 1. `data`: Data loaded from a CSV.
 2. `regions`: Dict containing region codes as keys and countries as values.
-3. `result_df`: Initialize as `None` to store the result of data aggregation by region and year.
+3. `df_region`: Initialize as `None` to store the result of data aggregation by region and year.
 
 ## Methods
-### `aggregate_data_by_region_and_year(self) -> pd.DataFrame`
-Aggregate data by Region, Year, Dim1, and calculate the mean of 'First Tooltip'.
 
-Returns: The aggregated dataframe which is stored in the `result_df` attribute.
+### `aggregate_data_by_region_and_year(self) -> pd.DataFrame`
+The World Health Organization (WHO) divides the world into six WHO regions, for the purposes of reporting, analysis and administration.  The user can aggregate the data they have for each country to six main regions, African Region (AFR), Regions of the Americas (AMR), South-East Asian Region (SEAR), European Region (EUR), European Region (EUR), Eastern Mediterranean Region (EMR), and Western Pacific Region (WPR). 
+
+Returns: The aggregated dataframe which is stored in the `df_region` attribute.
 
 ### `aggregate_years(data) -> pd.DataFrame`
 Aggregate time periods in the 'Period' column of the given DataFrame into year bins.
